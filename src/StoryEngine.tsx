@@ -81,6 +81,8 @@ const TextInputComp: React.FC<{
   );
 };
 
+const Spacer = () => <span className="spacer"></span>;
+
 export const StoryEngine = observer(() => {
   const [game] = useState(new RealGameState(story.ship_cabin));
   console.log(toJS(game));
@@ -100,6 +102,7 @@ export const StoryEngine = observer(() => {
   return (
     <div className="platz">
       <div className="description">{description}</div>
+      <Spacer />
       <div className="actions">
         {!!textInput && (
           <TextInputComp

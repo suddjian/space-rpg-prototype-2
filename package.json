@@ -1,7 +1,7 @@
 {
   "name": "space-rpg-prototype-2",
   "version": "1.0.0",
-  "description": "Trying out a declarative story structure",
+  "description": "A work in progress",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
