@@ -2,24 +2,50 @@ import React, { useState } from "react";
 import { makeAutoObservable, toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 
-import {
-  Action,
-  departureDate,
-  GameState,
-  LOOSE_END,
-  PlatzObj,
-  Result,
-  story,
-  TextInput
-} from "./story";
+import { departureDate, LOOSE_END, story } from "./story";
 
-const extractResult = (result: Result, game: GameState): PlatzObj | null => {
+export type Player = { name: string };
+
+export type PlatzFn = (game: GameState) => PlatzObj;
+
+export type Effect = (game: GameState) => void;
+
+export type PlatzRef = PlatzObj | string | PlatzFn | Effect;
+
+export type Result = PlatzRef | PlatzRef[];
+
+export type PlatzObj = {
+  id?: string;
+  description:
+    | string
+    | React.ReactNode
+    | ((game: GameState) => string | React.ReactNode);
+  actions?: Action[];
+  text_input?: TextInput;
+};
+
+export type TextInput = {
+  id?: string;
+  set: string;
+  result: Result;
+};
+
+export type Action = {
+  id?: string;
+  text: string | ((game: GameState) => string);
+  result: Result;
+  condition?: Condition;
+};
+
+export type Condition = (game: GameState) => boolean;
+
+const processResult = (result: Result, game: GameState): PlatzObj | null => {
   if (typeof result === "string") {
     return story[result];
   }
   if (Array.isArray(result)) {
     return result.reduce((acc: PlatzObj | null, current) => {
-      const platz = extractResult(current, game);
+      const platz = processResult(current, game);
       return acc || platz;
     }, null);
   }
@@ -29,7 +55,7 @@ const extractResult = (result: Result, game: GameState): PlatzObj | null => {
   return result;
 };
 
-class RealGameState implements GameState {
+export class GameState {
   constructor(start?: PlatzObj) {
     if (start) this.platz = start;
     makeAutoObservable(this);
@@ -38,11 +64,11 @@ class RealGameState implements GameState {
   turn = 0;
   day = 1;
   date = departureDate;
-  player = { name: "Spacefarer" };
-  state = {};
+  player: Player = { name: "Spacefarer" };
+  state: Record<string, any> = {};
   actionLog: { action: Action; result: PlatzObj }[] = [];
   storyStack: string[] = [];
-  platz = story.intro;
+  platz: PlatzObj = story.intro;
 
   doTextInput(textInput: TextInput, value: string) {
     const key = textInput.set.split(".");
@@ -60,7 +86,7 @@ class RealGameState implements GameState {
   }
 
   doAction(action: Action) {
-    const result = extractResult(action.result, this) || LOOSE_END;
+    const result = processResult(action.result, this) || LOOSE_END;
     this.actionLog.push({ action, result });
     this.platz = result;
   }
@@ -84,7 +110,7 @@ const TextInputComp: React.FC<{
 const Spacer = () => <span className="spacer"></span>;
 
 export const StoryEngine = observer(() => {
-  const [game] = useState(new RealGameState(story.ship_cabin));
+  const [game] = useState(new GameState(story.ship_cabin));
   console.log(toJS(game));
 
   const description =

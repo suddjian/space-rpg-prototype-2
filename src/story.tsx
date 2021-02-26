@@ -1,50 +1,13 @@
 import React from "react";
 import { addYears } from "date-fns";
-import { addDays } from "date-fns/esm";
-
-export type Player = { name: string };
-
-export type GameState = {
-  turn: number;
-  day: number;
-  date: Date;
-  player: Player;
-  state: Record<string, boolean>;
-  platz: PlatzObj;
-};
-
-type PlatzFn = (game: GameState) => PlatzObj;
-
-type Effect = (game: GameState) => void;
-
-export type PlatzRef = PlatzObj | string | PlatzFn | Effect;
-
-export type Result = PlatzRef | PlatzRef[];
-
-export type PlatzObj = {
-  id?: string;
-  description:
-    | string
-    | React.ReactNode
-    | ((game: GameState) => string | React.ReactNode);
-  actions?: Action[];
-  text_input?: TextInput;
-};
-
-export type TextInput = {
-  id?: string;
-  set: string;
-  result: Result;
-};
-
-export type Action = {
-  id?: string;
-  text: string | ((game: GameState) => string);
-  result: Result;
-  condition?: Condition;
-};
-
-export type Condition = (game: GameState) => boolean;
+import {
+  Action,
+  Condition,
+  Effect,
+  GameState,
+  PlatzObj,
+  Result
+} from "./StoryEngine";
 
 export const LOOSE_END: PlatzObj = {
   id: "loose_end",
