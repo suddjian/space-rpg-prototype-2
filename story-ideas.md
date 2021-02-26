@@ -18,11 +18,11 @@ Those with the gift of travel will drift, float, meander their way through The V
 
 To reach The Void, you must take a sturdy, sure ship out to the farthest reaches of the sea.
 
-First you will encounter great storms, and waves that will crumple lesser ships. But if your ship is built strong, you will come through the storm. Then you sail past the clouds, into a clear night. It is always night.
+First you will encounter great storms, and waves that will crumple lesser ships. But if your ship is built strong, you will sail past the storms and the waves, into a clear night. It is always night.
 
 You sail on. The moon sets behind you. Then the water becomes still. It becomes so still that the stars are reflected perfectly on the surface. It becomes so still that the ship's wake diminishes, until there is no wake. There are only stars above, and only their mirror images below.
 
-Then you begin to see stars that you do not know. You sail out towards them. You begin to see stars below are not the same as those above. You can no longer distinguish any horizon. There does not appear to be any water around you. You are surrounded by the blackness and foreign stars of The Void.
+Then you begin to see stars that you do not know. You sail out towards them. You notice stars below are not the same as those above. You can no longer distinguish any horizon. There does not appear to be any water around you. You are surrounded by the blackness and foreign stars of The Void.
 
 ### The Deep
 
