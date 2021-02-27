@@ -18,9 +18,9 @@ Those with the gift of travel will drift, float, meander their way through The V
 
 To reach The Void, you must take a sturdy, sure ship out to the farthest reaches of the sea. You will reach the farthest isles your kin have ever known. They are barren of life, but for mossy rocks and empty shells.
 
-You sail on. First you will encounter the great storms, whose waves would crumple lesser ships. But if your ship is built strong, you will sail past the storms and the waves, into a clear night. It is always night.
+You sail on. First you will meet the great storms, whose waves would crumple lesser ships. But if you and your ship are built strong, you will come through the storms and the waves, into a clear night. It is always night.
 
-You sail on. The water becomes still. It becomes so still that the stars are reflected perfectly on the surface. It becomes so still that your ship's wake diminishes, until it no longer seems to form a wake. You outrun the moon, which sets behind the horizon. There are only stars above, and only their mirror images below.
+You sail on. The water becomes still. It becomes so still that the stars are reflected perfectly on the surface. It becomes so still that your ship's wake diminishes, until it no longer seems to have a wake. You outrun the moon, which sets behind the horizon. There are only stars above, and only their mirror images below.
 
 You sail on. You begin to see stars that you do not know. You find stars below that do not mirror those above. You can no longer make out any horizon, or even the sea you are sailing upon. The world is all inky black, but for the stars. The smell of the salt air lingers before fading into a musky dankness.
 
