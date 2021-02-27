@@ -24,7 +24,7 @@ You sail on. The water becomes still. It becomes so still that the stars are ref
 
 You sail on. You begin to see stars that you do not know. You find stars below that do not mirror those above. You can no longer make out any horizon, or even the sea you are sailing upon. The world is all inky black, but for the stars. The smell of the salt air lingers before fading into a musky dankness.
 
-Now you are surrounded by the nothing, and the terrible Void Stars, the Deceivers, which see many a traveler to their end.
+Now you are surrounded by the nothing, and the terrible Void Stars, the Deceivers, which see many a brave traveler to their end.
 
 ### The Deep
 
