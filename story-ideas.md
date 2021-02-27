@@ -4,7 +4,7 @@
 
 The Earth is dying. A corruption is spreading and will soon engulf all the world, to the end of humanity.
 
-You are a member of one of the last efforts of a dying civilization: A mission to send out 40 Arks into The Deep, in search of new habitable worlds. Each ark is crewed by a single cosmonaut. Each ark holds within it our Tribe's heritage, and supplies to start new somewhere far away.
+You are a member of one of the last efforts of a dying civilization: A mission to send out 40 Arks into The Deep, in search of new habitable worlds. Each ark is crewed by a single cosmonaut. Each ark holds within it its Tribe's heritage, and supplies to start new somewhere far away.
 
 ### The Void
 
