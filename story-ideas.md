@@ -58,6 +58,17 @@ You are stuck with these broken people. Do you help them?
 Do you escape them?
 Do you activate the Ark?
 
+## The tied Deep Creature
+
+Basically the elephant-and-the-rope story but with a space whale type of creature captured by a caravan that travels through the Deep.
+You can free the creature if you choose.
+It will be grateful to you, but it will have trust issues.
+You will need to escape the caravan who has it tied up.
+They will be hostile to you going forward.
+If you leave it be, the caravan will be available to trade with.
+The space whale is a powerful creature.
+If you find someone to help the space whale with its emotional trauma, they will be a great help to you in times of need.
+
 ## 4th wall
 
 Encounter a cult that is fighting against the game's developer.
