@@ -6,7 +6,7 @@ import "./styles.css";
 export default function App() {
   return (
     <div className="app">
-      <h1>Space RPG Prototype 2</h1>
+      <h1 className="version">Space RPG Prototype 2</h1>
       <StoryEngine />
     </div>
   );

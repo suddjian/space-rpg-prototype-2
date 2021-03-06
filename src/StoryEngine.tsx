@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import cx from "classnames";
 import { makeAutoObservable, toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 
@@ -107,7 +108,22 @@ const TextInputComp: React.FC<{
   );
 };
 
-const Spacer = () => <span className="spacer"></span>;
+interface SpacerProps {
+  large?: boolean;
+  medium?: boolean;
+  small?: boolean;
+}
+
+const Spacer: React.FC<SpacerProps> = ({ large, medium, small }) => (
+  <span
+    className={cx(
+      "spacer",
+      large && "large",
+      medium && "medium",
+      small && "small"
+    )}
+  ></span>
+);
 
 export const StoryEngine = observer(() => {
   const [game] = useState(new GameState(story.ship_cabin));
@@ -128,9 +144,9 @@ export const StoryEngine = observer(() => {
   return (
     <div className="platz">
       <div className="description">{description}</div>
-      <Spacer />
+      <Spacer medium />
       <div className="actions">
-        {!!textInput && (
+        {textInput && (
           <TextInputComp
             onSubmit={(value) => game.doTextInput(textInput, value)}
           />
