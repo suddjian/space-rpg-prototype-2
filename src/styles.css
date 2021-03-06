@@ -1,7 +1,10 @@
 .app {
   font-family: sans-serif;
   text-align: center;
-  font-size: calc(var(--grid-size * 2));
+  font-size: calc(var(--grid-size) * 2);
+  display: grid;
+  grid-template-rows: 0px 1fr;
+  height: 100vh;
 }
 
 .actions {
@@ -26,12 +29,41 @@
   font-size: 1.2em;
 }
 
+.platz {
+  align-self: center;
+  padding: 2em;
+}
+
+.version {
+  font-size: 0.7em;
+  font-weight: lighter;
+  text-align: left;
+  margin: 1em;
+}
+
 .spacer {
-  display: inline-block;
-  min-width: var(--grid-size);
-  max-width: var(--grid-size);
-  min-height: var(--grid-size);
-  max-height: var(--grid-size);
+  display: block;
+  min-width: var(--spacer-size, var(--grid-size));
+  max-width: var(--spacer-size, var(--grid-size));
+  min-height: var(--spacer-size, var(--grid-size));
+  max-height: var(--spacer-size, var(--grid-size));
+}
+
+.spacer.large {
+  --spacer-size: calc(var(--grid-size) * 8);
+}
+
+.spacer.medium {
+  --spacer-size: calc(var(--grid-size) * 4);
+}
+
+.spacer.small {
+  --spacer-size: var(--grid-size);
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 :root {

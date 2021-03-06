@@ -11,7 +11,7 @@ import {
 
 export const LOOSE_END: PlatzObj = {
   id: "loose_end",
-  description: <div style={{ color: "red" }}>"todo: fill this in"</div>
+  description: <div style={{ color: "red" }}>todo: fill this in</div>
 };
 
 const flagsAreOn = (...keys: string[]): Condition => (game: GameState) =>
@@ -120,6 +120,29 @@ const EngageWindowCover: Action = {
       ]
     }
   ]
+};
+
+const AdjustEnergyControls: Action = {
+  text: "Adjust energy allocations",
+  condition: flagIsOn("ship_power_on"),
+  result: {
+    description: (game) =>
+      `A panel full of dials and levers. Shields are ${
+        flagIsOn("shields_up")(game) ? "up" : "down"
+      }.`,
+    actions: [
+      {
+        text: "Power shields up",
+        condition: flagIsOff("shields_up"),
+        result: [setFlagOn("shields_up"), "ship_cabin"]
+      },
+      {
+        text: "Power shields down",
+        condition: flagIsOn("shields_up"),
+        result: [setFlagOff("shields_up"), "ship_cabin"]
+      }
+    ]
+  }
 };
 
 export const story: { [key: string]: PlatzObj } = {
@@ -286,12 +309,7 @@ export const story: { [key: string]: PlatzObj } = {
         text: "Navigate to a destination",
         result: LOOSE_END
       },
-      {
-        id: "open_energy_controls",
-        condition: flagIsOn("ship_power_on"),
-        text: "Adjust energy controls",
-        result: LOOSE_END
-      },
+      AdjustEnergyControls,
       {
         id: "open_comms",
         condition: flagIsOn("ship_power_on"),
